@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>cell-list</title>
+	<link rel="stylesheet" href="css/weui.css" type="text/css">
+	<style>
+		.box{
+			margin-top: 30px;
+		}
+	</style>
+</head>
+<body ontouchstart>
+	<div class="box">
+		<div class="weui-cells__title">我是标题</div>
+		<div class="weui-cells">
+			<div class="weui-cell">
+				<div class="weui-cell__bd">开始</div>
+				<div class="weui-cell__ft">结束</div>
+			</div>
+			<div class="weui-cell weui-cell_swiped">
+				<div class="weui-cell__bd" style="transform: translateX(-68px);">
+					<div class="weui-cell">
+						<div class="weui-cell__bd">标题文字</div>
+						<div class="weui-cell__ft">结束</div>
+					</div>
+				</div>
+				<div class="weui-cell__ft">
+					<a href="javascript:;" class="weui-swiped-btn weui-swiped-btn_warn">删除</a>
+				</div>
+			</div>
+		</div>
+		<div class="weui-cells__title">带图片，说明的列表</div>
+		<div class="weui-cells">
+			<div class="weui-cell">
+				<div class="weui-cell__hd"><img src="images/icon_nav_form.png" alt="" style="width: 20px;margin-right: 5px;display: block;"></div>
+				<div class="weui-cell__bd">
+					<p>刑天</p>
+				</div>
+				<div class="weui-cell__ft">说明</div>
+			</div>
+		</div>
+		<div class="weui-cells__title">带跳转的列表</div>
+		<div class="weui-cells">
+			<a href="javascript:;" class="weui-cell weui-cell_access">
+				<div class="weui-cell__bd">跳转1</div>
+				<div class="weui-cell__ft"></div>
+			</a>
+			<a href="javascript:;" class="weui-cell weui-cell_access">
+				<div class="weui-cell__bd">跳转2</div>
+				<div class="weui-cell__ft"></div>
+			</a>
+		</div>
+		<div class="weui-cells__title">带跳转，说明的列表</div>
+		<div class="weui-cells">
+			<a href="javascript:;" class="weui-cell weui-cell_access">
+				<div class="weui-cell__bd">跳转1</div>
+				<div class="weui-cell__ft">就跳</div>
+			</a>
+			<a href="javascript:;" class="weui-cell weui-cell_access">
+				<div class="weui-cell__bd">跳转1</div>
+				<div class="weui-cell__ft">跳转</div>
+			</a>
+		</div>
+		<div class="weui-cells__title">带图片，跳转，说明的列表</div>
+		<div class="weui-cells">
+			<a href="javascript:;" class="weui-cell weui-cell_access">
+				<div class="weui-cell__hd">
+					<img src="images/icon_nav_panel.png" alt="" style="width: 20px;margin-right: 5px;display: block;">
+				</div>
+				<div class="weui-cell__bd">
+					<p>跳转1</p>
+				</div>
+				<div class="weui-cell__ft">就跳</div>
+			</a>
+			<a href="javascript:;" class="weui-cell weui-cell_access">
+				<div class="weui-cell__hd">
+					<img src="images/icon_nav_form.png" alt="" style="width: 20px;margin-right: 5px;display: block;">
+				</div>
+				<div class="weui-cell__bd">跳转2</div>
+				<div class="weui-cell__ft">不跳</div>
+			</a>
+		</div>
+	</div>
+</body>
+</html>

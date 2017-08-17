@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>weui</title>
+	<link rel="stylesheet" href="css/weui.css">
+	<style>
+		/*.box{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 150px;
+			background: red;
+			transform: translate(0,100%);
+			transition: transform 0.3s;
+		}*/
+		.toole{
+			transform: translate(0,0);
+		}
+	</style>
+</head>
+<body>
+	<a href="javascript:;" class="weui-btn weui-btn_primary">绿色按钮</a>
+	<div class="box" id="box">
+		<div class="weui-mask" id="mask" style="opacity: 0;display: none;"></div>
+		<div class="weui-actionsheet" id="weui-actionsheet">
+			<div class="weui-actionsheet__title">
+				<p class="weui-actionsheet__title-text">标题</p>
+			</div>
+			<div class="weui-actionsheet__menu">
+				<div class="weui-actionsheet__cell">1</div>
+				<div class="weui-actionsheet__cell">2</div>
+				<div class="weui-actionsheet__cell">3</div>
+			</div>
+			<div class="weui-actionsheet__action">
+				<div class="weui-actionsheet__cell">取消</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$('.weui-btn').click(function() {
+			$('#weui-actionsheet').addClass('toole');
+			$('#mask').fadeIn(200);
+		});
+		$('.weui-actionsheet__action,#mask').click(function() {
+			$('#weui-actionsheet').removeClass('toole');
+			$('#mask').fadeOut(200);
+		});
+	})
+	
+</script>

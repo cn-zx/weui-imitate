@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>dialog</title>
+	<link rel="stylesheet" href="css/weui.css" type="text/css">
+	<style type="text/css">
+		.box{
+			padding: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<a href="javascript:;" class="weui-btn weui-btn_default">ios dialogAlert</a>
+		<a href="javascript:;" class="weui-btn weui-btn_primary">ios dialogConfirm</a>
+		<a href="javascript:;" class="weui-btn weui-btn_warn">android dialogAlert</a>
+		<a href="javascript:;" class="weui-btn weui-btn_default">android dialogConfirm</a>
+	</div>
+	<div class="android1" style="display: none;">
+		<div class="weui-mask"></div>
+		<div class="weui-dialog weui-dialog_android">
+			<div class="weui-dialog__bd">asdfjasndofjasdf</div>
+			<div class="weui-dialog__ft">
+				<a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+				<a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+			</div>
+		</div>
+	</div>
+	<div class="android2" style="display: none;">
+		<div class="weui-mask"></div>
+		<div class="weui-dialog weui-dialog_android">
+			<div class="weui-dialog__hd">
+				<strong class="weui-dialog__title">asdfjkasjdf</strong>
+			</div>
+			<div class="weui-dialog__bd">dfghsdfs</div>
+			<div class="weui-dialog__ft">
+				<a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+				<a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/weui.js" type="text/javascript"></script>
+<script src="js/jquery-2.1.4.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function () {
+		$('.box>a').each(function(index, el) {
+			$(el).click(function() {
+				switch (index){
+					case 0:
+						weui.alert('自定义标题1',function () {
+							console.log('YES');
+						},{'title':'自定义标题2'})
+						break;
+					case 1:
+						weui.confirm('自定义标题2',function () {
+							console.log('NO2');
+						},function () {
+							console.log('YES2')
+						},{title:'自定义标题22'})
+						break;
+					case 2:
+						$('.android1').fadeIn(200);
+						break;
+					case 3:
+						$('.android2').fadeIn(200);
+						break;
+					default:
+						break;
+				}
+			});
+		});
+		$('a.weui-dialog__btn_default').click(function() {
+			$(this).parents('.android1,.android2').fadeOut(200);
+		})
+	})
+</script>

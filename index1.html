@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>weui</title>
+	<link rel="stylesheet" href="css/weui.css">
+	<style>
+		.box{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 150px;
+			background: red;
+			transform: translate(0,100%);
+			transition: transform 0.3s;
+		}
+		.toole{
+			transform: translate(0,0);
+		}
+	</style>
+</head>
+<body>
+	<a href="javascript:;" class="weui-btn weui-btn_primary">绿色按钮</a>
+	<div class="box" id="box"></div>
+</body>
+</html>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$('.weui-btn').click(function() {
+			$('.box').addClass('toole');
+		});
+
+		$('.box').click(function() {
+			$(this).removeClass('toole')
+		});
+	})
+	
+</script>
